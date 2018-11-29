@@ -1,0 +1,40 @@
+{
+  "ResourceTypes": {
+    "AWS::S3::Object": {
+      "Documentation": "https://github.com/awslabs/aws-cloudformation-templates/tree/master/aws/services/CloudFormation/MacrosExamples/S3Objects",
+      "Properties": {
+        "Target": {
+          "Documentation": "https://github.com/awslabs/aws-cloudformation-templates/tree/master/aws/services/CloudFormation/MacrosExamples/S3Objects",
+          "Type": "Target",
+          "Required": true,
+          "UpdateType": "Immutable"
+        },
+        "Body": {
+          "Documentation": "https://github.com/awslabs/aws-cloudformation-templates/tree/master/aws/services/CloudFormation/MacrosExamples/S3Object",
+          "Required": true,
+          "PrimitiveType": "String",
+          "UpdateType": "Immutable"
+        }
+      }
+    }
+  },
+  "PropertyTypes": {
+    "AWS::S3::Object.Target": {
+      "Documentation": "https://github.com/awslabs/aws-cloudformation-templates/tree/master/aws/services/CloudFormation/MacrosExamples/S3Objects",
+      "Properties": {
+        "Bucket": {
+          "Documentation": "https://github.com/awslabs/aws-cloudformation-templates/tree/master/aws/services/CloudFormation/MacrosExamples/S3Objects",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        },
+        "Key": {
+          "Documentation": "https://github.com/awslabs/aws-cloudformation-templates/tree/master/aws/services/CloudFormation/MacrosExamples/S3Objects",
+          "PrimitiveType": "String",
+          "Required": true,
+          "UpdateType": "Immutable"
+        }
+      }
+    }
+  }
+}

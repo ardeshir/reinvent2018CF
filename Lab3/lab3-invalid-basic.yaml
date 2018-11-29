@@ -1,0 +1,5 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  myWaitHandle1:
+    Type: 'AWS::CloudFormation::WaitConditionHandle'
+  ERROR

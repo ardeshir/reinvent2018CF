@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: "Create an S3 Object"
+Resources:
+  TargetBucket:
+    Type: AWS::S3::Bucket
+
+  NewObject:
+    Type: AWS::S3::Object
+    Properties:
+      Target:
+        Bucket: !Ref TargetBucket
+        Key: README.md
+        ContentType: text/markdown
+      Body: |
+        # My text file
+        
+        This is my text file;
+        there are many like it,
+        but this one is mine.
