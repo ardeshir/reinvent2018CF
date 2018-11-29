@@ -10,7 +10,7 @@ Resources:
       Target:
         Bucket: !Ref TargetBucket
         Key: README.md
-        ContentType: text/markdown
+        #ContentType: text/markdown
       Body: |
         # My text file
         

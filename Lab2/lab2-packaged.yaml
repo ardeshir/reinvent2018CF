@@ -1,0 +1,30 @@
+Resources:
+  Macro:
+    Properties:
+      FunctionName:
+        Fn::GetAtt:
+        - MacroFunction
+        - Arn
+      Name: S3Objects
+    Type: AWS::CloudFormation::Macro
+  MacroFunction:
+    Properties:
+      CodeUri: s3://dev418lab1/52002f8cb0219a743907ceb07bbe52e1
+      Environment:
+        Variables:
+          LAMBDA_ARN:
+            Fn::GetAtt:
+            - ResourceFunction
+            - Arn
+      Handler: macro.handler
+      Policies: AmazonS3FullAccess
+      Runtime: python3.6
+    Type: AWS::Serverless::Function
+  ResourceFunction:
+    Properties:
+      CodeUri: s3://dev418lab1/52002f8cb0219a743907ceb07bbe52e1
+      Handler: resource.handler
+      Policies: AmazonS3FullAccess
+      Runtime: python2.7
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31
