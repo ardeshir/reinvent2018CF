@@ -16,3 +16,5 @@ aws cloudformation deploy --stack-name s3objects-macro --template-file lab2-pack
 aws cloudformation describe-stacks --stack-name s3objects-macro
 
 aws cloudformation deploy --stack-name s3objects-test --template-file lab2-example.yaml --capabilities CAPABILITY_IAM
+
+aws cloudformation describe-stack-resources --stack-name s3objects-test
